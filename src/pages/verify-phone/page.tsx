@@ -1,4 +1,4 @@
-import { useState, useCallback, type FormEvent, type KeyboardEvent } from 'react';
+import { useState, useCallback, useRef, type FormEvent, type KeyboardEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const BG_IMAGE = 'https://storage.readdy-site.link/project_files/2c4f8ff7-4756-4178-b267-42959e65ba3d/70f06539-cc97-4527-a402-129ea4a73ba7_compressed_photo_2026-07-01_22-39-05.webp';
