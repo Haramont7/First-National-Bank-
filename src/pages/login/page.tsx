@@ -10,7 +10,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState<{ type: 'error' | 'success'; text: string } | null>(null);
-  const attemptCount = useRef(0);
+  const attemptCount = useRef<number>(0);
 
   const handleSubmit = useCallback(
     (e: FormEvent) => {
